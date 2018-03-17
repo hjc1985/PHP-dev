@@ -52,20 +52,18 @@ $ brew install php55
 由于各个php-fpm的版本不同，nginx监听php-fpm端口也是不同的，所以需要对各个版本的php-fpm的监听端口进行设置，下面进入各自的php-fpm的配置目录一般是在/usr/local/etc/php/{version}
 
 > php7.0
+采用默认端口9000:
+![](./images/php-fpm70-listen.jpg)
 
-采用默认端口9000
-![](./images/php-fpm70-listen.jpg?raw=true)
-
-
-在nginx的虚拟主机配置如下
-![](./images/nginx-conf-php70.jpg?raw=true)
+在nginx的虚拟主机配置如下:
+![](images/nginx-conf-php70.jpg)
 
 > php5.5
 采用端口9001
-![](./images/php-fpm55-listen.jpg?raw=true)
+![](./images/php-fpm55-listen.jpg)
 
-在nginx的虚拟主机配置如下
-![](./images/nginx-conf-php55.jpg?raw=true)
+在nginx的虚拟主机配置如下:
+![](./images/nginx-conf-php55.jpg)
 
 
 ### 将两个版本的php-fpm都启动
@@ -214,5 +212,10 @@ $ sudo pkill -9 nginx	//强制停止nginx
 $ sudo nginx -s reload	//平滑重启，不影响程序运行
 ```
 
+![php](http://p4sk87cgm.bkt.clouddn.com/php.png)
+
 ### 来源
 > [https://www.jianshu.com/p/81a6d5253d48]()
+
+
+
